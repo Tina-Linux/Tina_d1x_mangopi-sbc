@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo "------run rc.preboot file-----"
+#if [ -e /dev/by-name/private ]; then 
+#	echo "install private mount info"
+#	mkdir /tmp/private/
+#	/usr/sbin/ubiblock -c /dev/by-name/private
+#	echo `ls -al /dev/by-name/private` > /tmp/private.txt
+#	dev_num=`/usr/bin/awk -F "_" '{print $2}' /tmp/private.txt`
+#	mount /dev/ubiblock0_${dev_num} /tmp/private/
+#	rm -rf /tmp/private.txt
+#fi
+
+cd /sys/kernel/debug/dispdbg && echo disp0 > name; echo switch1 > command; echo 4 10 0 0 0x4 0x101 0 0 0 8 > param; echo 1 > start;
