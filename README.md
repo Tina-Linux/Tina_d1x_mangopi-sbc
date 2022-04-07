@@ -1,5 +1,5 @@
 # Tina_d1x_mangopi-sbc_MQ
-Added mangopi-sbc MQ board level files for Tina SDK
+Added mangopi-sbc MQ and MQ Pro board level files for Tina SDK
 
 # How To Use
 
