@@ -2,10 +2,10 @@
 echo "------run rc.final file-----"
 if [ x${boot_partition} == xboot ];then 
 	amixer cset name="Headphone Switch" 1
-	cat /sys/devices/platform/soc@3000000/soc@3000000:usbc0@0/usb_host
+	cat /sys/devices/platform/soc@3000000/soc@3000000:usbc0@0/usb_device
 	nice -n -20 /usr/bin/story_bin &
 else
-	cat /sys/devices/platform/soc@3000000/soc@3000000:usbc0@0/usb_host
+	cat /sys/devices/platform/soc@3000000/soc@3000000:usbc0@0/usb_device
 	export swu_software=$(fw_printenv -n swu_software 2>/dev/null)
 	export swu_mode=$(fw_printenv -n swu_mode 2>/dev/null)
 	nice -n -20 /usr/bin/story_ota_bin &

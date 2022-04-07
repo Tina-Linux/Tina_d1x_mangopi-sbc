@@ -163,3 +163,21 @@
 #
 #$(eval $(call KernelPackage,iio-mpu6xxx-spi))
 #
+
+define KernelPackage/8189fs
+  SUBMENU:=$(WIRELESS_MENU)
+  TITLE:=8189fs support (staging)
+  DEPENDS:= +kmod-sunxi-rf-wlan +kmod-cfg80211
+  KCONFIG:=\
+    CONFIG_RFKILL=y \
+	CONFIG_RFKILL_PM=y \
+    CONFIG_RFKILL_GPIO=y
+  FILES:=$(LINUX_DIR)/drivers/net/wireless/rtl8189fs/8189fs.ko
+  AUTOLOAD:=$(call AutoProbe, 8189fs.ko)
+endef
+
+define KernelPackage/net-xr819/description
+ Kernel modules for 8189fs support
+endef
+
+$(eval $(call KernelPackage,8189fs))

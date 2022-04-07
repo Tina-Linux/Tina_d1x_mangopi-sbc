@@ -532,14 +532,13 @@
 			/*clock-names = "32k-fanout1";*/
 			/*clocks = <&ccu CLK_FANOUT1_OUT>;*/
 			wlan_busnum    = <0x1>;
-			wlan_regon    = <&pio PG 12 GPIO_ACTIVE_HIGH>;
+			//wlan_regon    = <&pio PG 12 GPIO_ACTIVE_HIGH>;
 			wlan_hostwake  = <&pio PG 10 GPIO_ACTIVE_HIGH>;
 			/*wlan_power    = "VCC-3V3";*/
 			/*wlan_power_vol = <3300000>;*/
 			/*interrupt-parent = <&pio>;
 			interrupts = < PG 10 IRQ_TYPE_LEVEL_HIGH>;*/
 			wakeup-source;
-
 		};
 
 		bt: bt@0 {
@@ -644,7 +643,6 @@
 	ctl-spec-caps = <0x8>;
 	status = "okay";
 };
-
 
 /*
 tvd configuration

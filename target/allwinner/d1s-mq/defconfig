@@ -7,6 +7,7 @@ CONFIG_HAVE_DOT_CONFIG=y
 # CONFIG_TARGET_d1_h_lichee_rv is not set
 # CONFIG_TARGET_d1_h_lichee_rv_86 is not set
 # CONFIG_TARGET_d1_h_lichee_rv_dock is not set
+# CONFIG_TARGET_d1_h_mq_pro is not set
 # CONFIG_TARGET_d1_h_nezha is not set
 # CONFIG_TARGET_d1_h_nezha_min is not set
 # CONFIG_TARGET_d1_mangopi_mq_rgb800x480_gt9xx is not set
@@ -14,7 +15,6 @@ CONFIG_TARGET_d1s_mq=y
 # CONFIG_TARGET_d1s_nezha is not set
 # CONFIG_TARGET_d1s_yuzuki_nezha is not set
 CONFIG_TARGET_d1s_mq_=y
-# CONFIG_TARGET_d1s_yuzuki_nezha_ is not set
 CONFIG_TARGET_BOARD="d1s-mq"
 CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe"
 CONFIG_CPU_TYPE="c910+rv64gcxthead"
@@ -34,7 +34,6 @@ CONFIG_DEFAULT_uci=y
 CONFIG_DEFAULT_uclient-fetch=y
 CONFIG_AUDIO_SUPPORT=y
 CONFIG_GPIO_SUPPORT=y
-CONFIG_USES_XRADIO=y
 CONFIG_USB_SUPPORT=y
 CONFIG_RTC_SUPPORT=y
 CONFIG_USES_DEVICETREE=y
@@ -2196,7 +2195,7 @@ CONFIG_PACKAGE_ubusd=y
 #
 # Libraries
 #
-# CONFIG_PACKAGE_libcutils is not set
+CONFIG_PACKAGE_libcutils=y
 
 #
 # btmanager
@@ -2647,7 +2646,6 @@ CONFIG_PACKAGE_wifimanager-demo=y
 # CONFIG_PACKAGE_r528-dsp-firmware is not set
 CONFIG_FIRMWARE_PATH="/lib/firmware/"
 # CONFIG_XR829_USE_40M_SDD is not set
-# CONFIG_XR819S_USE_40M_SDD is not set
 # CONFIG_PACKAGE_r8723ds-firmware is not set
 # CONFIG_PACKAGE_r8822cs-firmware is not set
 # CONFIG_PACKAGE_rtl8733bs-firmware is not set
@@ -2655,7 +2653,7 @@ CONFIG_FIRMWARE_PATH="/lib/firmware/"
 # CONFIG_PACKAGE_uwe5622-firmware is not set
 # CONFIG_PACKAGE_xr819-firmware is not set
 # CONFIG_PACKAGE_xr819a-firmware is not set
-CONFIG_PACKAGE_xr819s-firmware=y
+# CONFIG_PACKAGE_xr819s-firmware is not set
 # CONFIG_PACKAGE_xr829-firmware is not set
 
 #
@@ -3173,7 +3171,8 @@ CONFIG_PACKAGE_kmod-sunxi-disp=y
 #
 # Wireless Drivers
 #
-# CONFIG_PACKAGE_kmod-cfg80211 is not set
+CONFIG_PACKAGE_kmod-8189fs=y
+CONFIG_PACKAGE_kmod-cfg80211=y
 # CONFIG_PACKAGE_kmod-esp8089 is not set
 # CONFIG_PACKAGE_kmod-net-broadcom is not set
 # CONFIG_PACKAGE_kmod-net-mrvl8977 is not set
@@ -3181,7 +3180,7 @@ CONFIG_PACKAGE_kmod-sunxi-disp=y
 # CONFIG_PACKAGE_kmod-net-rtl8188eu is not set
 # CONFIG_PACKAGE_kmod-net-rtl8723bs is not set
 # CONFIG_PACKAGE_kmod-net-rtl8821cs is not set
-CONFIG_PACKAGE_kmod-net-xr819s=y
+# CONFIG_PACKAGE_kmod-net-xr819s is not set
 # CONFIG_PACKAGE_kmod-net-xr829 is not set
 # CONFIG_PACKAGE_kmod-net-xr829-40M is not set
 
@@ -4344,8 +4343,11 @@ CONFIG_PACKAGE_hostapd-common=y
 # CONFIG_PACKAGE_hostapd-wolfssl is not set
 CONFIG_PACKAGE_wpa-cli=y
 # CONFIG_PACKAGE_wpa-supplicant-basic is not set
+# CONFIG_PACKAGE_wpa-supplicant-mesh-openssl is not set
+# CONFIG_PACKAGE_wpa-supplicant-mesh-wolfssl is not set
 # CONFIG_PACKAGE_wpa-supplicant-mini is not set
 # CONFIG_PACKAGE_wpa-supplicant-openssl is not set
+# CONFIG_PACKAGE_wpa-supplicant-p2p is not set
 # CONFIG_PACKAGE_wpa-supplicant-wolfssl is not set
 # CONFIG_PACKAGE_wpa-supplicant is not set
 # CONFIG_WPA_RFKILL_SUPPORT is not set
@@ -4360,6 +4362,8 @@ CONFIG_WPA_MSG_MIN_PRIORITY=3
 CONFIG_PACKAGE_wpad-basic=y
 # CONFIG_PACKAGE_wpad-basic-openssl is not set
 # CONFIG_PACKAGE_wpad-basic-wolfssl is not set
+# CONFIG_PACKAGE_wpad-mesh-openssl is not set
+# CONFIG_PACKAGE_wpad-mesh-wolfssl is not set
 # CONFIG_PACKAGE_wpad-mini is not set
 # CONFIG_PACKAGE_wpad-openssl is not set
 # CONFIG_PACKAGE_wpad-wolfssl is not set
